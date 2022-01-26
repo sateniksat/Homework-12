@@ -1,0 +1,19 @@
+$text-color:darkblue;
+$background-color:lightblue;
+
+@mixin text($x,$y,$pseudo:false) {
+    padding-top: $y/$x*100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    justify-content: space-around;
+}
+.container{
+    width: 70%;
+    .text{
+        @include text( 20 ,5,$pseudo:true);
+        color: $text-color;
+        background-color: $background-color;
+    } 
+}

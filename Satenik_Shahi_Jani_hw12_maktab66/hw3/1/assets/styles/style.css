@@ -1,0 +1,19 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container {
+  width: 70%;
+}
+
+.container .text {
+  padding-top: 25%;
+  width: 100%;
+  color: darkblue;
+  background-color: lightblue;
+}
+/*# sourceMappingURL=style.css.map */
