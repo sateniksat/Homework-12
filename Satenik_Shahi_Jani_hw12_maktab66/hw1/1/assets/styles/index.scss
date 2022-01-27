@@ -1,21 +1,112 @@
-$background:#f2f2f2;
-$border:#ccc;
-$button:#1b9b45;
-$button-hover:#158d3d;
-$background-black:rgba(0, 0, 0, 0.4);
-$red:#d30101;
+$input-background: #f2f2f2;
+$input-border: #ccc;
+$green: #1b9b45;
+$green-hover: #158d3d;
+$background-black: rgba(0, 0, 0, 0.4);
+$red: #d30101;
+$close: #aaaaaa;
+$black: #000;
+$modal-bg: #fefefe;
+$modal-br: #888;
+$btn-txt-clr: white;
 
-@mixin input($color){
-    width: 100%;
-    padding: 1.5% 3%;
-    margin: 1% 0 1% 0;
-    display: inline-block;
-    border: 1px solid $color;
-    border-radius: 4px;
-    box-sizing: border-box;
+@mixin input($color) {
+  width: 100%;
+  padding: 1.5% 3%;
+  margin: 1% 0 1% 0;
+  display: inline-block;
+  border: 1px solid $color;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-body{
+body {
+  display: flex;
+  justify-content: space-around;
+  .modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: $background-black;
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
+  }
+  .d-none {
+    display: none;
+  }
+  .modal-content {
+    background-color: $modal-bg;
+    margin: auto;
+    font-size: large;
+    padding: 2%;
+    border: 1px solid $modal-br;
+    width: 60%;
+  }
+  .modal p {
+    &:hover {
+      color: $green-hover;
+    }
+  }
+  .close {
+    color: $close;
+    float: right;
+    font-size: xx-large;
+    font-weight: bold;
+    &:hover,
+    &:focus {
+      color: $black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+.container {
+  width: 60%;
+  border-radius: 5px;
+  background-color: $input-background;
+  padding: 3%;
+  .firstname,
+  .lastname,
+  .select {
+    @include input($input-border);
+  }
+  .submit {
+    background-color: $green;
+    color: $btn-txt-clr;
+    padding: 1.5% 3%;
+    margin: 1.5% 0 0.5% 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+      background-color: $green-hover;
+    }
+  }
+  textarea {
+    resize: none;
+    width: 100%;
+    padding: 1.5% 3%;
+    margin: 1% 0;
+    display: inline-block;
+    border: 1px solid $input-border;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    height: 20vh;
+  }
+  .red-border {
+    border: 3px solid $red;
+  }
+  .red-text {
+    color: $red;
+    margin: 0.25% 0;
+    font-size: smaller;
+  }
+  .unvisible {
+    visibility: hidden;
+  }
 }
