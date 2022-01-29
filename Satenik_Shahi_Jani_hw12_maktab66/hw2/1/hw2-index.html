@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <style>
+      body {
+        display: flex;
+        justify-content: space-around;
+      }
+      .container {
+        margin: 5%;
+        width: 70%;
+        background-color: lightsteelblue;
+        border-radius: 25px;
+        padding: 2%;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3 style="direction: rtl">
+        متد method then برای function های async است و timetest به عنوان یک
+        function regular تعریف شده و به این دلیل ورودی undefined میشود و
+        timetest منتظر انجام function ها و خروجی های آن نمیشود. میتوان از async
+        function, await و یا از متد های all, any ,race و ... استفاده نمود.
+      </h3>
+      <a href="https://www.w3schools.com/js/js_async.asp"
+        >https://www.w3schools.com/js/js_async.asp</a
+      >
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any"
+        >https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any</a
+      >
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all"
+        >https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all</a
+      >
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race"
+        >https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race</a
+      >
+    </div>
     <script src="hw2-index.js"></script>
-</body>
+  </body>
 </html>
